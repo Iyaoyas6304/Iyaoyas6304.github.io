@@ -1,47 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Active Directory Project</title>
-</head>
-<body>
-    <h1>IT Project (Creating Active Directory)</h1>
+## Active Directory Project Steps
 
-    <h2>Step 1: In Virtual Box, create a "New" VM.</h2>
-    <p>Name it "DC" for Domain Controller. In the setup of DC, change Version to "Other Windows (64-bit)" and click continue. For the Memory Size, it does depend how much RAM you have. Hopefully you 8Gb, but make it 2048Mb and click Next. On the next page, leave everything as is. Everything is set to "Defaults". Click Continue until DC has been created.</p>
-    <img src="VM menu showing DC and Client.png" alt="VM menu showing DC and Client">
+### Step 1: Setting up the Domain Controller
+1. Create and configure a new domain.
+![Active Directory Users and Computers](https://github.com/iyaoyas6304/active-directory/blob/main/assets/Active%20Directory%20Users,Computers,Admin.png)
 
-    <h2>Step 2: DC Setup</h2>
-    <p>Double click on your DC to start it. This is where we are going to install Microsoft Server 2019. MAKE SURE THAT YOUR COMPUTER IS SET TO HANDLE VIRTUALIZATION THROUGH THE BIOS OF YOUR COMPUTER. (VARIOUS MAKES OF COMPUTERS VARIES WHICH BUTTON TO HIT ON BOOTUP OF YOUR COMPUTER, BUT IT CAN BE EITHER: ESCAPE, F1,F2,F6,F8,F10, OR F12. WHEN INSIDE OF THE BIOS, GO TO "system configuration" AND "enable" "virtualization technology".</p>
-    <img src="Domanin Controler Local Server screen.png" alt="Domain Controller Local Server screen">
+### Step 2: Configuring the Client Machine
+1. Set up the client machine to join the domain.
+![Client1 Setup](https://github.com/iyaoyas6304/active-directory/blob/main/assets/client1.png)
 
-    <h2>Step 3: 1st Time Start of DC</h2>
-    <p>After the server OS has been installed, it will ask you to create a password for the Built-In Admin. Make the password "P@ssw0rd1". And click "Finish" to finalize the settings. When it asks you to "Press Ctrl+Alt+Delete", go to the input menu at the top, keyboard, and click "Insert Ctrl+Alt+Delete". Then put in the password that you've set, "P@ssw0rd1".</p>
-    <img src="Active Directory Users,Computers,Admin.png" alt="Active Directory Users, Computers, Admin">
+### Step 3: Setting up DHCP Server
+1. Install and configure the DHCP server.
+![DHCP Server](https://github.com/iyaoyas6304/active-directory/blob/main/assets/DHCP%20Server.png)
 
-    <h2>Step 4: Setting up the Networking</h2>
-    <p>DC NIC1 (INTERNET) = (DHCP) WILL GET ADDRESSING FROM HOME ROUTER. DC NIC2 (INTERNAL) (THE VMWARE NETWORK): IP: 172.16.0.1, MASK: 255.255.255.0, GATEWAY: &lt;empty&gt;, DNS: 127.0.0.1 (this is a loop back address).</p>
-    <img src="Static IP internal network.png" alt="Static IP internal network">
+### Step 4: Setting Internet Connection for DHCP
+1. Configure DHCP to provide internet access.
+![DHCP Internet Connection](https://github.com/iyaoyas6304/active-directory/blob/main/assets/DHCP%20set%20internet%20connection.png)
 
-    <h2>Step 5: Setting up the Domain</h2>
-    <p>In the "Server Manager Dashboard", click on "Add roles and features. Click "Next" 3 times until you get to a list of checkboxes. Check the box that says "Active Directory Domain Services". Then click next until you get to the install option, and install. Once it's done installing, it will say "Configuration required. Installation succeeded on DC" underneath the progress bar, click close.</p>
-    <img src="DHCP set internet connection.png" alt="DHCP set internet connection">
+### Step 5: Configuring the Domain Controller
+1. Configure settings on the domain controller.
+![Domain Controller Local Server](https://github.com/iyaoyas6304/active-directory/blob/main/assets/Domanin%20Controler%20Local%20Server%20screen.png)
 
-    <h2>Step 6: Setting up the RAS/NAT</h2>
-    <p>With you being logged in as the local admin, click on "Add roles and features", click "Next" until you see Server Roles. Check the "Remote Access" box, click next until you get to "Role Services". Click the "Routing" box, click "Add Features" on the next screen, click Next until you get to the "Install" button and click install. When it's done installing, you will see "Configuration required. Installation succeeded on DC" underneath the progress bar, click close.</p>
-    <img src="Routing and Remote Access.png" alt="Routing and Remote Access">
+### Step 6: Creating Users with PowerShell
+1. Use PowerShell to create users.
+![PowerShell User List](https://github.com/iyaoyas6304/active-directory/blob/main/assets/Powershell%20user%20list%20(error%20is%20users%20already%20exist).png)
 
-    <h2>Step 7: Setting up DHCP</h2>
-    <p>Click on "Add roles and features", click "Next" until you get to the "Server Roles". Select "DHCP Server", accept all of the defaults by clicking "Next" until you see the button to "Install". Click the "Install" button. You know it's done when you see the message, "Configuration required. Installation succeeded on DC" underneath the progress bar, click close.</p>
-    <img src="DHCP Server.png" alt="DHCP Server">
+### Step 7: Setting Up Routing and Remote Access
+1. Configure routing and remote access.
+![Routing and Remote Access](https://github.com/iyaoyas6304/active-directory/blob/main/assets/Routing%20and%20Remote%20Access.png)
 
-    <h2>Step 8: PowerShell Script to Add Users</h2>
-    <p>(In LIVE environments, you will not do this, but because we can save time and not deal with the hassle of not adding users 1-by-1, we're going to do this.)</p>
-    <img src="Powershell user list (error is users already exist).png" alt="PowerShell user list">
+### Step 8: Setting Static IP for Internal Network
+1. Configure static IP for internal network.
+![Static IP Internal Network](https://github.com/iyaoyas6304/active-directory/blob/main/assets/Static%20IP%20internal%20network.png)
 
-    <h2>Step 9: Creating the Win10 Client</h2>
-    <p>Let's minimize the DC Virtual Machine and go back to the Virtual Box Manager. We're going to create a new VM so click on "New", name this "CLIENT1", change the "Version" to "Windows 10 (64-bit), click NEXT, accept all defaults and click "Finish".</p>
-    <img src="client1.png" alt="Win10 Client">
-</body>
-</html>
+### Step 9: Virtual Machine Settings
+1. View settings for DC and Client in VirtualBox.
+![VM Settings](https://github.com/iyaoyas6304/active-directory/blob/main/assets/VM%20menu%20showing%20DC%20and%20Client.png)
