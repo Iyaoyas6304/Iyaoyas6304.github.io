@@ -1,37 +1,91 @@
-## Active Directory Project Steps
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Directory Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .screenshot {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        .screenshot p {
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Active Directory Project</h1>
+    <p>This project demonstrates the setup and configuration of Active Directory, including user and computer management, DHCP server configuration, and more.</p>
 
-### Step 1: Setting up the Domain Controller
-1. Create and configure a new domain.
-![Active Directory Users and Computers](https://github.com/iyaoyas6304/active-directory/blob/main/assets/Active%20Directory%20Users,Computers,Admin.png)
+    <div class="screenshot">
+        <h2>Step 1: Setting Up Active Directory Users and Computers</h2>
+        <img src="images/Active Directory Users,Computers,Admin.png" alt="Active Directory Users and Computers">
+        <p>Active Directory Users and Computers management interface.</p>
+    </div>
 
-### Step 2: Configuring the Client Machine
-1. Set up the client machine to join the domain.
-![Client1 Setup](https://github.com/iyaoyas6304/active-directory/blob/main/assets/client1.png)
+    <div class="screenshot">
+        <h2>Step 2: Configuring Client Machine</h2>
+        <img src="images/client1.png" alt="Configuring Client Machine">
+        <p>Client machine configured and added to the domain.</p>
+    </div>
 
-### Step 3: Setting up DHCP Server
-1. Install and configure the DHCP server.
-![DHCP Server](https://github.com/iyaoyas6304/active-directory/blob/main/assets/DHCP%20Server.png)
+    <div class="screenshot">
+        <h2>Step 3: Setting Up DHCP Server</h2>
+        <img src="images/DHCP Server.png" alt="Setting Up DHCP Server">
+        <p>DHCP server configuration on the domain controller.</p>
+    </div>
 
-### Step 4: Setting Internet Connection for DHCP
-1. Configure DHCP to provide internet access.
-![DHCP Internet Connection](https://github.com/iyaoyas6304/active-directory/blob/main/assets/DHCP%20set%20internet%20connection.png)
+    <div class="screenshot">
+        <h2>Step 4: Verifying DHCP Configuration</h2>
+        <img src="images/DHCP set internet connection.png" alt="Verifying DHCP Configuration">
+        <p>Verifying that the DHCP server is assigning IP addresses correctly.</p>
+    </div>
 
-### Step 5: Configuring the Domain Controller
-1. Configure settings on the domain controller.
-![Domain Controller Local Server](https://github.com/iyaoyas6304/active-directory/blob/main/assets/Domanin%20Controler%20Local%20Server%20screen.png)
+    <div class="screenshot">
+        <h2>Step 5: Domain Controller Local Server</h2>
+        <img src="images/Domanin Controler Local Server screen.png" alt="Domain Controller Local Server">
+        <p>Overview of the domain controller's local server settings.</p>
+    </div>
 
-### Step 6: Creating Users with PowerShell
-1. Use PowerShell to create users.
-![PowerShell User List](https://github.com/iyaoyas6304/active-directory/blob/main/assets/Powershell%20user%20list%20(error%20is%20users%20already%20exist).png)
+    <div class="screenshot">
+        <h2>Step 6: Creating Users with PowerShell</h2>
+        <img src="images/Powershell user list (error is users already exist).png" alt="Creating Users with PowerShell">
+        <p>PowerShell script to create users in Active Directory. Errors indicate that the users already exist.</p>
+    </div>
 
-### Step 7: Setting Up Routing and Remote Access
-1. Configure routing and remote access.
-![Routing and Remote Access](https://github.com/iyaoyas6304/active-directory/blob/main/assets/Routing%20and%20Remote%20Access.png)
+    <div class="screenshot">
+        <h2>Step 7: Configuring Routing and Remote Access</h2>
+        <img src="images/Routing and Remote Access.png" alt="Configuring Routing and Remote Access">
+        <p>Setting up routing and remote access on the server.</p>
+    </div>
 
-### Step 8: Setting Static IP for Internal Network
-1. Configure static IP for internal network.
-![Static IP Internal Network](https://github.com/iyaoyas6304/active-directory/blob/main/assets/Static%20IP%20internal%20network.png)
+    <div class="screenshot">
+        <h2>Step 8: Setting Static IP for Internal Network</h2>
+        <img src="images/Static IP internal network.png" alt="Setting Static IP for Internal Network">
+        <p>Configuring a static IP address for the internal network.</p>
+    </div>
 
-### Step 9: Virtual Machine Settings
-1. View settings for DC and Client in VirtualBox.
-![VM Settings](https://github.com/iyaoyas6304/active-directory/blob/main/assets/VM%20menu%20showing%20DC%20and%20Client.png)
+    <div class="screenshot">
+        <h2>Step 9: Virtual Machine Menu</h2>
+        <img src="images/VM menu showing DC and Client.png" alt="Virtual Machine Menu">
+        <p>Oracle VM VirtualBox menu showing the domain controller and client machines.</p>
+    </div>
+</body>
+</html>
