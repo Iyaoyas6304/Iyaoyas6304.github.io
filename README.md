@@ -1,1 +1,1 @@
-<h1>Hi, I'm Aram! <br/><a href="https://github.com/iyaoyas6304">IT Professional</a>, <a href="https://www.linkedin.com/in/joshmadakor/">Cybersecurity Professional</a>, <a href="https://www.youtube.com/c/joshmadakor">YouTuber</a></h1>
+<h1>Hi, I'm Aram! <br/><a href="https://github.com/iyaoyas6304">IT Professional</a>, <a>Cybersecurity Trained</a>
